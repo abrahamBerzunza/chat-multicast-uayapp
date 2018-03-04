@@ -1,0 +1,11 @@
+.container .container-messages {
+  padding: 2% 4%;
+}
+
+.container-messages {
+  border-top: 2px solid #1976d2;
+  border-bottom: 2px solid #1976d2;
+  height: 55vh;
+  overflow-y: auto;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
+}

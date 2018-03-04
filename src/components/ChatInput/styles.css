@@ -1,0 +1,22 @@
+.page-footer {
+  margin-top: 10vh;
+}
+
+.input-container {
+  margin-top: -8px;
+  margin-right: 8px;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #ffc107 !important;
+}
+/* label focus color */
+input[type=text] {
+  color: black;
+}
+/* label underline focus color */
+input[type=text]:focus {
+  border-bottom: 1px solid #ffc107 !important;
+  box-shadow: 0 1px 0 0 #ffc107 !important;
+}
