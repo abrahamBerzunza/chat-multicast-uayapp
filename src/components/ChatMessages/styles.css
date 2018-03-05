@@ -7,6 +7,11 @@
   border-radius: 5px; 
 }
 
+.username {
+  font-size: 8px;
+  font-style: italic;
+  padding-right: 30%;
+}
 
 .container .message-self {
   margin-left: 50%;
@@ -16,3 +21,4 @@
 .container .message-everyone {
   margin-right: 50%;
 }
+

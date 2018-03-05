@@ -15,6 +15,12 @@ function ChatMessages(props) {
 
   return (
     <div className={`${validateCurrentUser()} message-chat row`}>
+      <div className="row">
+        <div className="username col s12">
+          {props.message.displayName}
+          <div class="divider" />
+        </div>
+      </div>
       <div className='col s5 m3 l3'>
         <img
           width='48px'
