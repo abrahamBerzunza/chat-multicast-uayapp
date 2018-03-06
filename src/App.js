@@ -7,6 +7,7 @@ import NewRoom from './components/NewRoom';
 import SideNav from './components/SideNav';
 import ChatRoom from './components/ChatRoom';
 import SideNavMobile from './components/SideNavMobile';
+import UsersOnline from './components/UsersOnline';
 
 class App extends Component {
 
@@ -127,6 +128,8 @@ class App extends Component {
           <ChatRoom 
             user={this.state.user}
             currentRoom={this.state.currentRoom}/>
+
+          <UsersOnline user={this.state.user}/>
         </div>
       ) 
     }
@@ -148,6 +151,8 @@ class App extends Component {
           rooms={this.state.rooms}
           user={this.state.user}
           onSetRoom={this.handleSetRoom}
+          onAuth={this.handleAuth}
+          onLogout={this.handleLogout}
         />
 
         <NewRoom 
