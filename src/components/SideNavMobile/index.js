@@ -18,7 +18,7 @@ function SideNavMobile(props) {
           onClick={props.onLogout}> 
             Logout
         </button>
-        <img className='circle' src={props.user.photoURL}/>
+        <img className='circle' src={props.user.photoURL} alt={props.user.displayName}/>
         <span className='white-text name'>{props.user.displayName}</span>
       </div>
     );

@@ -9,7 +9,7 @@ function Navbar(props) {
     return (
       <ul className='navbar right hide-on-med-and-down'>
         <li>
-          <img width='50' className='avatar circle responsive-img' src={props.user.photoURL}/>
+          <img width='50' className='avatar circle responsive-img' src={props.user.photoURL} alt={props.user.displayName}/>
         </li>
         <li className='name'>{props.user.displayName}</li>
         <li>
