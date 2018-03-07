@@ -74,7 +74,7 @@ class ChatRoom extends Component {
                 <ChatMessages
                   key={msg.date}
                   message={msg}
-                  currentUser={firebase.auth().currentUser}
+                  user={this.props.user}
                 />
               ))
             }

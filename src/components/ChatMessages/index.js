@@ -5,7 +5,7 @@ import './styles.css';
 function ChatMessages(props) {
 
   function validateCurrentUser() {
-    if(props.currentUser.uid === props.message.uid) {
+    if(props.user.uid === props.message.uid) {
       return 'message-self'; 
     }
     else {
