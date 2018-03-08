@@ -21,8 +21,9 @@ function ChatInput(props) {
     <form className='page-footer transparent' onSubmit={handleSubmit}>
       <div className='container row'>
         <div className='input-container input-field col s6 m9 l7 push-l3'>
-          <input id='typing-message' name='text' type='text' onChange={props.onChangeMessage}
-		  onKeyPress={handleKeyPress}/>
+          <input id='typing-message' name='text' type='text' 
+            onChange={props.onChangeMessage} 
+            onKeyPress={handleKeyPress}/>
           <label htmlFor="typing-message">Mensaje ...</label>
         </div>
         <div className='col s2 l3 push-l3 '>

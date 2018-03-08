@@ -29,24 +29,24 @@ class App extends Component {
     this.handleCreateRoom = this.handleCreateRoom.bind(this);
     this.handleSetRoom = this.handleSetRoom.bind(this);
   }
-
+  
   componentDidMount() {
     const SUPPORT_ID = 'RvPxALxWenPy41aBj8i6JMlCK0n1';
     const roomsDB = firebase.database().ref().child('rooms');
-
+    
     roomsDB.on('child_added', snapshot => {
       this.setState({
         rooms: this.state.rooms.concat(snapshot.val())
-      })
-
-      if(firebase.auth().currentUser.uid === SUPPORT_ID) {
+      });
+      
+      if(this.state.user.uid === SUPPORT_ID) {
         Push.create('Se ha creado una nueva sala', {
           body: `${snapshot.val().name}`
         });
       }
     });
   }
-
+  
   componentWillMount() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -58,9 +58,9 @@ class App extends Component {
           user: null
         })
       }
-    });    
+    });  
   }
-  
+
   handleAuth() {
 
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -161,7 +161,7 @@ class App extends Component {
         />
 
         {this.renderUI()}
-        
+
       </div>
     );
   }
