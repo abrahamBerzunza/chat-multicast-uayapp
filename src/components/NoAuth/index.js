@@ -9,7 +9,7 @@ function NoAuth() {
         <div className='card'>
           <div className='card-content'>
             <span className='card-title'>
-              Si tienes una cuenta Google accede directo desde el menu!
+              Si tienes una cuenta Google accede directo desde el menú!
             </span>
           </div>
           <div className='card-action'>
