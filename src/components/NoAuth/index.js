@@ -8,7 +8,9 @@ function NoAuth() {
       <div className='col s12 m8 push-m2 l6 push-l3'>
         <div className='card'>
           <div className='card-content'>
-            <span className='card-title'>Necesitas tener una cuenta Google para ingresar!</span>
+            <span className='card-title'>
+              Si tienes una cuenta Google accede directo desde el menu!
+            </span>
           </div>
           <div className='card-action'>
             <a 
