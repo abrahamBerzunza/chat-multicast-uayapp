@@ -9,12 +9,20 @@ function NewRoom(props) {
     document.getElementById('new-room').classList.add('disabled');
   }
 
+  function handleKeyPress(e){
+	  if (e.key === 'Enter' && e.target.value === ''){
+		  e.preventDefault();
+	  }
+  }
+
   return(
     <form id='modal-group' className='modal' onSubmit={handleSubmit}>
       <div className='modal-content'>
         <h4>Nueva Sala</h4>
         <div className='input-field'>
-          <input id='input-room' name='text' type='text' onChange={props.onChangeName}/>
+          <input id='input-room' name='text' type='text' 
+          onChange={props.onChangeName}
+          onKeyPress={handleKeyPress}/>
           <label htmlFor='input-room'>Nombre de la sala</label>
         </div>
       </div>
