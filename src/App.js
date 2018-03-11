@@ -99,12 +99,20 @@ class App extends Component {
     const roomsDB = firebase.database().ref().child('rooms');
     let newRoom = roomsDB.push();
     let rid = newRoom.key;
+    let upperCaseRoomName = roomName.toUpperCase();
     let room = {
       roomId: rid,
-      name: roomName
+      name: upperCaseRoomName
     }
 
-    newRoom.set(room);
+    let roomRepeat = this.state.rooms.filter(room => {
+      return room.name.replace(/\s/g, '') === upperCaseRoomName.replace(/\s/g, '')
+    });
+
+    if(roomRepeat.length === 0)
+      newRoom.set(room);
+    else
+      alert('El nombre que ingresó ya existe');
   }
 
   handleSetRoom(element) {
