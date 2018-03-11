@@ -15,7 +15,7 @@ class ChatRoom extends Component {
     }
 
     this.handleSendMessage = this.handleSendMessage.bind(this);
-    this.handleChangeMessage = this.handleChangeMessage.bind(this);
+    this.handleChangeButton = this.handleChangeButton.bind(this);
   }
 
   componentDidMount() {
@@ -44,7 +44,7 @@ class ChatRoom extends Component {
     newUserMessage.set(msg);
   }
 
-  handleChangeMessage(e) {
+  handleChangeButton(e) {
 
     let message = e.target.value;
     let buttonSend = document.getElementById('submit-message');
@@ -82,7 +82,7 @@ class ChatRoom extends Component {
         </div>
         <ChatInput 
           onSendMessage={this.handleSendMessage}
-          onChangeMessage={this.handleChangeMessage} />
+          onChangeButton={this.handleChangeButton} />
       </div>
     );
   }

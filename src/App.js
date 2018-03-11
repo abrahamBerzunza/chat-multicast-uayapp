@@ -25,7 +25,7 @@ class App extends Component {
 
     this.handleAuth = this.handleAuth.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
-    this.handleChangeName = this.handleChangeName.bind(this);
+    this.handleChangeButton = this.handleChangeButton.bind(this);
     this.handleCreateRoom = this.handleCreateRoom.bind(this);
     this.handleSetRoom = this.handleSetRoom.bind(this);
   }
@@ -83,7 +83,7 @@ class App extends Component {
     });
   }
 
-  handleChangeName(e) {
+  handleChangeButton(e) {
     let roomName = e.target.value;
     let btnNewRoom = document.getElementById('new-room');
 
@@ -156,7 +156,7 @@ class App extends Component {
         />
 
         <NewRoom 
-          onChangeName={this.handleChangeName}
+          onChangeButton={this.handleChangeButton}
           onCreateRoom={this.handleCreateRoom}  
         />
 

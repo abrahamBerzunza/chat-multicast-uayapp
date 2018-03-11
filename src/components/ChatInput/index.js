@@ -22,7 +22,7 @@ function ChatInput(props) {
       <div className='container row'>
         <div className='input-container input-field col s6 m9 l7 push-l3'>
           <input id='typing-message' name='text' type='text' 
-            onChange={props.onChangeMessage} 
+            onChange={props.onChangeButton} 
             onKeyPress={handleKeyPress}/>
           <label htmlFor="typing-message">Mensaje ...</label>
         </div>

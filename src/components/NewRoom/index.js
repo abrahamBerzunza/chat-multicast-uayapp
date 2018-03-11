@@ -21,7 +21,7 @@ function NewRoom(props) {
         <h4>Nueva Sala</h4>
         <div className='input-field'>
           <input id='input-room' name='text' type='text' 
-          onChange={props.onChangeName}
+          onChange={props.onChangeButton}
           onKeyPress={handleKeyPress}/>
           <label htmlFor='input-room'>Nombre de la sala</label>
         </div>
