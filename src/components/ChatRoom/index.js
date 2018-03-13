@@ -18,6 +18,10 @@ class ChatRoom extends Component {
     this.handleChangeButton = this.handleChangeButton.bind(this);
   }
 
+  componentDidUpdate(){
+	this.scrollToBottom();  
+  }
+  
   componentDidMount() {
     const messagesDB = firebase.database().ref().child('messages');
 
@@ -27,6 +31,7 @@ class ChatRoom extends Component {
         messages: this.state.messages.concat(snapshot.val())
       })
     });
+	this.scrollToBottom();
   }
 
   handleSendMessage(text) {
@@ -56,6 +61,10 @@ class ChatRoom extends Component {
       buttonSend.classList.add('disabled');
     }
   }
+  
+  scrollToBottom = () => {
+	this.messagesEnd.scrollIntoView({ behavior: "smooth"});
+  }
 
   render() {
     return (
@@ -78,6 +87,11 @@ class ChatRoom extends Component {
                 />
               ))
             }
+			
+		  <div style={{ float:"left", clear: "both"}}
+            ref={(el) => { this.messagesEnd = el; }}>
+          </div>
+		  
           </div>
         </div>
         <ChatInput 
