@@ -18,8 +18,8 @@ class ChatRoom extends Component {
     this.handleChangeButton = this.handleChangeButton.bind(this);
   }
 
-  componentDidUpdate(){
-	this.scrollToBottom();  
+  componentDidUpdate() {
+	  this.scrollToBottom();  
   }
   
   componentDidMount() {
@@ -31,7 +31,6 @@ class ChatRoom extends Component {
         messages: this.state.messages.concat(snapshot.val())
       })
     });
-	this.scrollToBottom();
   }
 
   handleSendMessage(text) {
@@ -62,8 +61,8 @@ class ChatRoom extends Component {
     }
   }
   
-  scrollToBottom = () => {
-	this.messagesEnd.scrollIntoView({ behavior: "smooth"});
+  scrollToBottom() {
+	  this.messagesEnd.scrollIntoView({ behavior: "smooth"});
   }
 
   render() {
@@ -88,9 +87,7 @@ class ChatRoom extends Component {
               ))
             }
 			
-		  <div style={{ float:"left", clear: "both"}}
-            ref={(el) => { this.messagesEnd = el; }}>
-          </div>
+		      <div style={{ float:"left", clear: "both"}} ref={(el) => { this.messagesEnd = el; }} />
 		  
           </div>
         </div>
