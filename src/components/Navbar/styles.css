@@ -1,0 +1,20 @@
+.brand-logo {
+  margin-top: 8px;
+}
+
+.avatar {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.name {
+  margin-right: 8px;
+}
+
+.btn-logout, .btn-login {
+  margin-right: 60px;
+}
+
+nav i.chat-logo {
+  line-height: 40px;
+}

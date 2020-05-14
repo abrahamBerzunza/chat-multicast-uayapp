@@ -1,0 +1,24 @@
+.message-chat {
+  padding: 5px;
+  clear: both;
+  border: 1px solid #1976d2;
+  margin: 5px 0;
+	background-color: #fff;
+  border-radius: 5px; 
+}
+
+.username {
+  font-size: 8px;
+  font-style: italic;
+  padding-right: 30%;
+}
+
+.container .message-self {
+  margin-left: 50%;
+  background-color: #e3f2fd;
+}
+
+.container .message-everyone {
+  margin-right: 50%;
+}
+
